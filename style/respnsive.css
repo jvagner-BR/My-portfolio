@@ -1,0 +1,17 @@
+@media screen and (max-width:700px){
+    .container--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.75rem 1.25rem;
+        max-width: 75rem;
+        margin: 0 auto;
+}
+}
+@media screen and (max-width:450px){
+    
+}
+
+@media screen and (min-width:100px){
+   
+}

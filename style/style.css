@@ -1,0 +1,248 @@
+body {
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.container-jv {
+    /* border: 1px solid #ffffff; */
+    display: flex;
+    background-color: #111;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-jv-e {
+    padding-left: 150px;
+    width: auto;
+}
+
+.text-jv-d {
+    width: 850px;
+    height: 938px;
+    background-image: url(/src/img/sites/jv-d.gif);
+    background-position: right ;
+}
+
+.container-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 100px;
+}
+.text-animado {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Comic Sans MS',;
+    font-size: 10rem;
+}
+
+.sobre-min {
+    display: flex;
+    background-color: #111;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sobre-min > div {
+    margin: 30px;
+    padding: auto;
+}
+
+.sobre-min > .felx-text {
+    align-items: center;
+    height: auto;
+    width: 60%;
+    
+}
+
+.felx-text > p {
+    align-items: center;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.user {
+    width: 350px;
+    height: 350px;
+    box-sizing: border-box;
+    border: 5px rgb(170, 170, 170) solid;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+    animation: float 4s ease-in-out infinite; 
+
+}
+.user img { width: 100%; height: auto; }
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.projetos {
+    /* border: 1px solid #ffffff; */
+    height: auto;
+    background-color: #111;
+    padding: 6rem;
+    padding-bottom: 100px;
+}
+
+.card-text {
+    word-wrap: break-word;
+    width: 380px;
+    height: 100px; 
+    overflow: hidden; 
+    text-overflow:ellipsis;
+}
+
+.card-text:hover {
+    overflow: auto;
+}
+
+.card-img-top {
+    height: 214px;
+}
+
+.Habilidades {
+    /* border: 1px solid #ffffff; */
+    bottom: 100px;
+    display: flex;
+    background-color: #111;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.conteiner-logo {
+    /* border: 1px solid #ffffff; */
+    background-color: #111;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+}
+
+.conteiner-logo > p {
+    font-size: 5rem;
+}
+
+.sckill-container {
+    width: auto;
+}
+
+.sckill-hover{
+    font-size: 5rem;
+    width: auto;
+}
+
+.sckill-i {
+ color: #ffffff;
+}
+
+.sckill-i:hover {
+    color: #6e6e6e;
+    font-size: 5.2rem;
+}
+
+.sckill-container2 {
+    background-color: #ffffff;
+}
+@media screen and (max-width: 1400px) {
+    #bg-img{
+        height: 60vh;
+    }
+    .card-text {
+        width: 300px;
+        height: 50px; 
+    }
+    .user {
+        width: 300px;
+        height: 300px;
+    }
+    .sobre-min > .felx-text {
+        align-items: center;
+        height: auto;
+        width: 45%;
+    }
+    .felx-text > p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #bg-img{
+        height: 60vh;
+    }
+    .card-text {
+        width: 250px;
+        height: 50px; 
+    }
+    .user {
+        width: 270px;
+        height: 270px;
+    }
+    .sobre-min > .felx-text {
+        align-items: center;
+        height: auto;
+        width: 40%;
+    }
+    .felx-text > p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #bg-img{
+        height: 60vh;
+    }
+    .text-animado {
+        font-size: 3rem;
+    }
+    .card-text {
+        width: 200px;
+        height: 50px; 
+    }
+}
+
+@media screen and (max-width: 880px) {
+    #bg-img{
+        height: 60vh;
+    }
+    .user {
+        width: 220px;
+        height: 220px;
+    }
+    .text-animado {
+        font-size: 3rem;
+    }
+    .card-text {
+        width: 170px;
+        height: 50px; 
+    }
+}
+@media screen and (max-width: 600px) {
+    #bg-img{
+        height: 30vh;
+    }
+    .text-animado {
+        font-size: 1rem;
+    }
+    .card-text {
+        width: 150px;
+        height: 50px; 
+    }
+}
