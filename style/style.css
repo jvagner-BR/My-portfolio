@@ -4,25 +4,67 @@ body {
     padding: 0;
 }
 
+.sidebar,.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar {
+    left: -100%;
+    max-width: 300px;
+    transition: all ease 0.25s;
+    overflow-y: auto;
+    z-index: 1032;
+  }
+
+  .overlay {
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    visibility: hidden;
+    z-index: 1031;
+  }
+
+.main-navigation.active .sidebar{
+    left: 0;
+}
+
+.main-navigation.active .overlay{
+    visibility: visible;
+}
+
+
+.my-name {
+    color: #ffff;
+}
+
 .container-jv {
-    /* border: 1px solid #ffffff; */
     display: flex;
-    background-color: #111;
+    background-image:linear-gradient(to left, rgba(0, 0, 0, 0), #111) ,url(../src/img/pexels-sohail-nachiti-807598.jpg);
+    width: 100%;
+    background-size: cover;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
 }
 
 .text-jv-e {
-    padding-left: 150px;
+    margin-left: 150px;
     width: auto;
+    /* mask-image: #111; */
+}
+
+.text-jv-e-text1 {
+    color: #ffff;
+    font-size: 30px;
 }
 
 .text-jv-d {
-    width: 850px;
-    height: 938px;
-    background-image: url(/src/img/sites/jv-d.gif);
-    background-position: right ;
+    margin-right: 150px;
+
 }
 
 .container-text {
@@ -43,7 +85,7 @@ body {
     background-color: #111;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 84vh;
 }
 
 .sobre-min > div {
@@ -58,11 +100,30 @@ body {
     
 }
 
-.felx-text > p {
+.felx-text {
     align-items: center;
     font-family: 'Comic Sans MS', cursive;
     font-size: 1.5rem;
     color: #ffffff;
+}
+
+.text-sobre-mim {
+    margin-top: 281px;
+}
+
+.rs-logo {
+    display: flex;
+    margin-top: 281px;
+}
+
+.rs-logo > div > a{
+    color: #ffffff;
+    margin: 10px;
+}
+
+.rs-i:hover{
+    font-size: 25px;
+    color: #6e6e6e;
 }
 
 .user {
@@ -74,10 +135,15 @@ body {
     overflow: hidden;
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
     transform: translatey(0px);
-    animation: float 4s ease-in-out infinite; 
-
+    animation: float 4.5s ease-in-out infinite; 
 }
-.user img { width: 100%; height: auto; }
+
+.user:hover {
+    width: 360px;
+    height: 360px;
+}
+.user img { 
+    width: 100%; height: auto; }
 
 @keyframes float {
 	0% {
@@ -120,24 +186,27 @@ body {
 
 .Habilidades {
     /* border: 1px solid #ffffff; */
-    bottom: 100px;
+    margin-bottom: 50px;
     display: flex;
     background-color: #111;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    width: auto;
+    height: 100%;
+    margin-left: 100px;
 }
 
 .conteiner-logo {
     /* border: 1px solid #ffffff; */
-    background-color: #111;
+
     color: #ffffff;
     text-align: center;
     align-items: center;
+    font-size: 5rem;
 }
 
-.conteiner-logo > p {
-    font-size: 5rem;
+.text-projeto {
+    margin-top: 150px;
 }
 
 .sckill-container {
@@ -150,7 +219,7 @@ body {
 }
 
 .sckill-i {
- color: #ffffff;
+    color: #ffffff;
 }
 
 .sckill-i:hover {
@@ -158,13 +227,7 @@ body {
     font-size: 5.2rem;
 }
 
-.sckill-container2 {
-    background-color: #ffffff;
-}
 @media screen and (max-width: 1400px) {
-    #bg-img{
-        height: 60vh;
-    }
     .card-text {
         width: 300px;
         height: 50px; 
@@ -178,14 +241,28 @@ body {
         height: auto;
         width: 45%;
     }
-    .felx-text > p {
+    .felx-text {
         font-size: 1.2rem;
+    }
+    
+    .rs-logo {
+        font-size: 1rem;
+        margin-top: 100px;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    #bg-img{
-        height: 60vh;
+    .text-jv-e {
+        margin-left: 100px;
+    }
+    .text-jv-d {
+        margin-right: 100px;
+    }
+    .text-animado {
+        font-size: 5rem;
+    }
+    .text-jv-e-text1 {
+        font-size: 20px;
     }
     .card-text {
         width: 250px;
@@ -200,27 +277,102 @@ body {
         height: auto;
         width: 40%;
     }
-    .felx-text > p {
-        font-size: 1rem;
+    .felx-text {
+        font-size: 1.5rem;
+    }
+    .rs-logo {
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        margin-top: 100px;
+    }
+    .sckill-i {
+     font-size: 4rem;
+    } 
+    .sckill-i:hover {
+        font-size: 4.2rem;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    #bg-img{
-        height: 60vh;
+    .text-jv-e {
+        margin-left: 70px;
+    }
+    .text-jv-d {
+        margin-right: 70px;
     }
     .text-animado {
         font-size: 3rem;
+    }
+    .sobre-min > .felx-text {  
+        height: 80%;
+    }
+    .felx-text > p {
+        overflow: auto;
+    }
+    .text-sobre-mim {
+        height: 50%;
+        overflow: auto;
+        margin-top: 120px;
+    }
+    .rs-logo {
+        margin-top: 120px;
+    }
+    .text-projeto {
+        margin-top: 0px;
     }
     .card-text {
         width: 200px;
         height: 50px; 
     }
+    .conteiner-logo {
+        font-size: 4rem;
+    }
+    .sckill-i {
+        font-size: 3rem;
+    } 
+    .sckill-i:hover {
+           font-size: 3.2rem;
+    }
+    .card-img-top {
+        height: 200px;
+    }
+    .card-body {
+        width: 100%;
+        height: 190px;
+    }
+    
 }
-
+@media (min-width: 992px) {
+    .sidebar {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      flex-direction: row;
+      max-width: 100%;
+      transform: none;
+      transition: none;
+      overflow-y: visible;
+      z-index: auto;
+    }
+  }
+@media screen and (max-width: 950px) {
+    .text-jv-e {
+        margin-left: 50px;
+    }
+    .text-jv-d {
+        margin-right: 50px;
+    }
+    .conteiner-logo {
+        font-size: 3.5rem;
+    }
+}
 @media screen and (max-width: 880px) {
-    #bg-img{
-        height: 60vh;
+    .text-jv-e {
+        margin-left: 50px;
+    }
+    .text-jv-d {
+        margin-right: 50px;
     }
     .user {
         width: 220px;
@@ -233,16 +385,125 @@ body {
         width: 170px;
         height: 50px; 
     }
+    .felx-text {
+        font-size: 1.3rem;
+    }
+    .Habilidades {
+        margin-left: 50px;
+        }
+    .sckill-i {
+        font-size: 2.6rem;
+    } 
+    .sckill-i:hover {
+           font-size: 2.8rem;
+    }
 }
 @media screen and (max-width: 600px) {
     #bg-img{
         height: 30vh;
     }
     .text-animado {
-        font-size: 1rem;
+        font-size: 2.5rem;
     }
     .card-text {
         width: 150px;
         height: 50px; 
     }
+    .Habilidades {
+    margin-left: 50px;
+    }
+    .sckill-i {
+        font-size: 2rem;
+    } 
+    .sckill-i:hover {
+           font-size: 2.2rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .sobre-min > .felx-text  {
+        /* margin-left: px; */
+    }
+    .Habilidades {
+        margin-left: 20px;
+    }
+    .card-img-top {
+        height: auto;
+    }
+    .card-body {
+        width: 100%;
+        height: auto;
+    }
+
+}
+@media screen and (max-width: 450px) {
+    .sobre-min > .felx-text  {
+        margin-left: -70px;
+    }
+    .user {
+        width: 160px;
+        height: 160px;
+        margin-right: -110px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .my-name {
+        justify-content: center;
+    }
+    .nav-item {
+        font-size: 10px;
+    }
+    .container-jv {
+        width: 100%;
+        height: 707px;
+    }
+    .text-jv-e {
+        margin-left: 20px;
+    }
+    .text-jv-d {
+        margin-right: 20px;
+    }
+    .sobre-min > .felx-text  {
+        margin-left: -70px;
+    }
+    .user {
+        width: 150px;
+        height: 150px;
+        margin-right: -110px;
+    }
+    .text-animado {
+        font-size: 2rem;
+    }
+    .text-jv-e-text1 {
+        font-size: 15px;
+    }
+    .conteiner-logo {
+        font-size: 1.5rem;
+    }
+    .rs-logo {
+        margin-top: 80px;
+    }
+    .Habilidades {
+        margin-left: 15px;
+    }
+    
+    .sckill-hover{
+        font-size: 1.2rem;
+        width: auto;
+    }
+    
+    .sckill-i {
+     color: #ffffff;
+     font-size: 1rem;
+    }
+    
+    .sckill-i:hover {
+        color: #6e6e6e;
+        font-size: 1.2rem;
+    }
+    
+}
+@media screen and (max-width: 380px) {
+.rs-logo {
+    margin-top: 30px;
+}
 }
